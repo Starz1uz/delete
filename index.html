@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>input</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    form {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: start;
+      padding: 40px;
+    }
+
+    form .col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    label span {
+      text-transform: capitalize;
+    }
+
+    label input {
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid #c4c4c4;
+    }
+
+    form button {
+      all: unset;
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 30px;
+      border-radius: 5px;
+      background-color: rgb(35, 35, 191);
+      color: white;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+
+    .req {
+      color: blue;
+    }
+
+    .req input {
+      border-color: blue;
+    }
+
+    .error {
+      color: red;
+    }
+
+
+    .error input {
+      border-color: red;
+    }
+
+    .error p {
+      background-image: url(./img/warn.svg);
+      background-size: contain;
+      width: 16px;
+      height: 18px;
+      position: relative;
+      left: 100%;
+      top: 56px;
+    }
+
+    #pdd {
+      all: unset;
+      padding: 4px;
+      border-radius: 10px;
+      border: solid grey;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1>Example form</h1>
+    <br>
+    <span data-id="All">All: 12 &nbsp;</span>
+    <span data-id="need">Need: 12 &nbsp;</span>
+    <span id="succes">Success: 0/12 &nbsp;</span>
+    <span id="wrong">Error: 0/12 &nbsp;</span>
+  </center>
+  <br>
+  <form name="signup">
+    <div class="col">
+      <label class="req" for="name">
+        <p></p>
+        <span>Name</span>
+        <input id="name" type="name" name="name" placeholder="name" />
+      </label>
+
+      <span>Surname</span>
+      <input type="surname" name="Surname" placeholder="Surname" id="pdd">
+
+      <label class="req">
+        <p></p>
+        <span>Email adress</span>
+        <input type="text" name="Email">
+      </label>
+
+      <span>Phone number</span>
+      <input type="phone" name="phone" id="pdd">
+
+      <span>Your mom's name</span>
+      <input type="pap" name="mam" id="pdd">
+
+      <span>Your Pap's name</span>
+      <input type="mom" name="pap" id="pdd">
+    </div>
+
+    <div class="col">
+
+      <label class="req">
+        <p></p>
+        <span>Age</span>
+        <input type="Age" name="Age">
+      </label>
+
+      <label class="req">
+        <p></p>
+        <span>About you</span>
+        <input type="text" name="about">
+      </label>
+
+      <label class="req">
+        <p></p>
+        <span>What is Javascript?</span>
+        <input type="js" name="js">
+      </label>
+
+      <label class="req">
+        <p></p>
+        <span>What is Html?</span>
+        <input type="html" name="html">
+      </label>
+
+      <label class="req">
+        <p></p>
+        <span>What is CSS?</span>
+        <input type="css" name="css">
+      </label>
+
+      <span>Your favorite car</span>
+      <input type="text" name="text" id="pdd">
+    </div>
+
+    <button>submit</button>
+  </form>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
